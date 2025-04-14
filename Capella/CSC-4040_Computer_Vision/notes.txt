@@ -1,0 +1,22 @@
+SECTION 1
+1. Prompt user for path to directory DONE
+    read_images_from_directory()
+2. Print out to screen number of images in folder DONE
+    read_images_from_directory()
+3. Prompt user for Haar Cascade XML file (start with default) DONE
+    load_haar_cascade()
+4. Prompt user for output location (Positives/Negatives) DONE
+    setup_output_directory()
+5. Save outputs DONE
+    classify_and_save_images()
+
+TESTING
+- test on resources-face_dataset_1
+- test on resources-face_dataset_2
+
+SECTION 2
+1. Identify correctly identified images
+2. Identify false positives
+3. Identify false negatives
+4. Visually inspect false negatives and false positives
+5. Visually inspect true positives

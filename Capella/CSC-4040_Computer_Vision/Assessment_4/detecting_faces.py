@@ -62,8 +62,10 @@ def setup_output_directory():
     print("Output directories for Positives and Negatives are set up.")
     return positive_path, negative_path
 
-def classify_and_save_images(image_dir, face_cascade, positive_path, negative_path):
-    for filename in os.listdir(image_dir):
+def classify_and_save_images(image_dir, face_cascades, positive_path, negative_path):
+    colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (255, 0, 255), (0, 255, 255)]
+    
+    for idx, filename in enumerate(os.listdir(image_dir)):
         if not check_if_image(filename):
             continue
 
@@ -74,11 +76,18 @@ def classify_and_save_images(image_dir, face_cascade, positive_path, negative_pa
             continue
 
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+        detected = False
 
-        if len(faces) > 0:
-            for (x, y, w, h) in faces:
-                cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+        for i, cascade in enumerate(face_cascades):
+            color = colors[i % len(colors)]
+            faces = cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+
+            if len(faces) > 0:
+                detected = True
+                for (x, y, w, h) in faces:
+                    cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
+
+        if detected:
             cv2.imwrite(os.path.join(positive_path, filename), img)
         else:
             cv2.imwrite(os.path.join(negative_path, filename), img)
@@ -136,21 +145,51 @@ def analyze_results(positive_path, negative_path, faces, no_faces):
     print(f"True Negatives: {true_negatives}")
     print(f"False Negatives: {flase_negatives}\n")
 
-def test_section_2():
-    faces, no_faces = load_manifest()
-    image_dir = input("Enter the path to the image directory for testing: ")
-    positive_path = '/Users/darienprall/Documents/GitHub/School/Capella/CSC-4040_Computer_Vision/Assessment_4/Images/Positives'
-    negative_path = '/Users/darienprall/Documents/GitHub/School/Capella/CSC-4040_Computer_Vision/Assessment_4/Images/Negatives'
-    analyze_results(positive_path, negative_path, faces, no_faces)
+# def test_section_2():
+#     faces, no_faces = load_manifest()
+#     image_dir = input("Enter the path to the image directory for testing: ")
+#     positive_path = '/Users/darienprall/Documents/GitHub/School/Capella/CSC-4040_Computer_Vision/Assessment_4/Images/Positives'
+#     negative_path = '/Users/darienprall/Documents/GitHub/School/Capella/CSC-4040_Computer_Vision/Assessment_4/Images/Negatives'
+#     analyze_results(positive_path, negative_path, faces, no_faces)
+
+def load_mupltiple_haar_cascades():
+    xml_dir = input("Enter the path to the Haar Cascade XML directory: ")
+    if not os.path.isdir(xml_dir):
+        print("Haar Cascade XML directory does not exist. Please check the path and try again.")
+        return None
+    
+    cascades = []
+    for file in os.listdir(xml_dir):
+        if file.lower().endswith('.xml'):
+            xml_path = os.path.join(xml_dir, file)
+            cascade = cv2.CascadeClassifier(xml_path)
+            if cascade.empty():
+                print(f"Failed to load Haar Cascade XML file: {file}. Please check the file and try again.")
+            else:
+                cascades.append(cascade)
+                print(f"Haar Cascade loaded successfully: {file}.")
+    return cascades
 
 def main():
     image_dir = input("Enter the path to the image directory: ")
     images = read_images_from_directory(image_dir)
-    face_cascade = load_haar_cascade()
+    #face_cascade = load_haar_cascade()
+    face_cascade = load_mupltiple_haar_cascades()
 
     if face_cascade:
         positive_path, negative_path = setup_output_directory()
         classify_and_save_images(image_dir, face_cascade, positive_path, negative_path)
+    
+    faces, no_faces = load_manifest()
+    # TEST FOR SECTION 2
+    #print("\nMANIFEST DICTIONARY COUNTS:")
+    #print(f"Number of Face Images: {len(faces)}")
+    #print(f"Number of No Face Images: {len(no_faces)}")
+    #print("\nIMAGE DICTIONARIES:")
+    #print(f"Images with Faces: {faces}")
+    #print(f"\nImages without Faces: {no_faces}\n")
+
+    analyze_results(positive_path, negative_path, faces, no_faces)
 
 if __name__ == "__main__":
     main()
