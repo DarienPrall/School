@@ -107,7 +107,7 @@ def process_marker_image():
 - Comment out line 85
 - When finished reverse steps
 '''
-process_marker_image()
+#process_marker_image()
 
 # --- SECTION 2: Scene Image Matching ---
 '''
@@ -119,7 +119,63 @@ To-Do:
 5. Decide match vs. no-match based on threshold.
 6. Save result images in positive/negative subfolders.
 '''
+def load_scene_images(folder_path):
+    valid_exts = ['.jpg', '.jpeg']
+    images = []
+    filenames = []
+    for file in os.listdir(folder_path):
+        if os.path.splitext(file)[1].lower() in valid_exts:
+            img = cv2.imread(os.path.join(folder_path, file), cv2.IMREAD_GRAYSCALE)
+            if img is not None:
+                images.append(img)
+                filenames.append(file)
+    print(f"Loaded {len(images)} images from {folder_path}.")
+    return images, filenames
 
+def match_images(marker_kp, marker_desc, scene_images, descriptor, out_dir):
+    bf = cv2.BFMatcher()
+    pos_dir = os.path.join(out_dir, 'Positive')
+    neg_dir = os.path.join(out_dir, 'Negative')
+    os.makedirs(pos_dir, exist_ok=True)
+    os.makedirs(neg_dir, exist_ok=True)
+
+    threshold = 10
+    results = []
+
+    for i, img in enumerate(scene_images[0]):
+        kp, desc = descriptor.detectAndCompute(img, None)
+        matches = bf.knnMatch(marker_desc, desc, k=2)
+
+        # Testing Ration
+        good = []
+        for m, n in matches:
+            if m.distance < 0.75 * n.distance:
+                good.append(m)
+        print(f"Image {i+1}: Found {len(good)} good matches.")
+
+        is_match = len(good) > threshold
+        img_name = scene_images[1][i]
+        result_img = cv2.drawMatches(scene_images[0][i], kp, scene_images[0][i], kp, good, None)
+        out_path = os.path.join(pos_dir if is_match else neg_dir, img_name)
+        cv2.imwrite(out_path, result_img)
+
+        results.append((img_name, is_match, len(good)))
+        print(f"Processed {img_name}: {'Match' if is_match else 'No Match'} with {len(good)} good matches.")
+    return results
+
+# TESTING
+#load_scene_images('/Users/darienprall/Downloads/resources-image-descriptors/image-descriptors_scenes')
+# def quick_test():
+#     marker_img, marker_kp, marker_desc = process_marker_image()
+#     scene_folder = input("Enter path to the scene images folder: ")
+#     scenes = load_scene_images(scene_folder)
+#     out_folder = input("Enter output folder path for results: ")
+#     method = input("Enter the descriptor method used earlier (AKAZE, ORB, SIFT): ")
+#     descriptor = get_descriptor(method)
+#     match_results = match_images(marker_kp, marker_desc, scenes, descriptor, out_folder)
+#     manifest = input("Enter path to the ground truth manifest file: ")
+
+#quick_test()
 
 # --- SECTION 3: Evaluation Against Manifest ---
 '''
@@ -130,7 +186,48 @@ To-Do:
 4. Print classification summary.
 '''
 
+def load_manifest(mainfest_path):
+    marker = []
+    no_marker = []
 
+    with open(mainfest_path, 'r') as file:
+        current_section = None
+        for line in file:
+            line = line.strip()
+            if line == "CONTAINS MARKER":
+                current_section = 'marker'
+            elif line == "DOES NOT CONTAIN MARKER":
+                current_section = 'no_marker'
+            elif line:
+                if current_section == 'marker':
+                    marker.append(line)
+                elif current_section == 'no_marker':
+                    no_marker.append(line)
+    manifest = {name: True for name in marker}
+    manifest.update({name: False for name in no_marker})
+    return manifest
+
+def analyze_results(results, manifest_path):
+    manifest = load_manifest(manifest_path)
+    tp = fp = fn = tn = 0
+
+    for name, predicted, _ in results:
+        actual = manifest.get(name, False)
+        if predicted and actual:
+            tp += 1
+        elif predicted and not actual:
+            fp += 1
+        elif not predicted and actual:
+            fn += 1
+        else:
+            tn += 1
+
+    print(f"True Positives: {tp}")
+    print(f"False Positives: {fp}")
+    print(f"False Negatives: {fn}")
+    print(f"True Negatives: {tn}")
+    return tp, fp, fn, tn
+    
 # --- MAIN WORKFLOW ---
 '''
 To-Do:
@@ -139,3 +236,16 @@ To-Do:
 3. Perform matching and save results.
 4. Evaluate matches against manifest labels.
 '''
+if __name__ == "__main__":
+    marker_img, marker_kp, marker_desc = process_marker_image()
+    method = input("Enter the descriptor method used earlier (AKAZE, ORB, SIFT): ")
+    descriptor = get_descriptor(method)
+
+    scene_folder = input("Enter the path to the scene images folder: ")
+    scenes = load_scene_images(scene_folder)
+    out_folder = input("Enter output folder to save results: ")
+    match_results = match_images(marker_kp, marker_desc, scenes, descriptor, out_folder)
+
+    manifest = input("Enter path to manifest.txt: ")
+    analyze_results(match_results, manifest)
+    out_folder = input("Enter output folder path to save results: ")
