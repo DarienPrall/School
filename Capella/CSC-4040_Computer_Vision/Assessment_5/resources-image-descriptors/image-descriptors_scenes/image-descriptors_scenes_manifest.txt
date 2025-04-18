@@ -1,0 +1,23 @@
+CONTAINS MARKER
+da63d51d-a2cb-4e1a-9ff8-ca3580505a7e.jpg
+bc4fb818-65ec-4549-b564-ec06dd6b8839.jpg
+9cd2d654-a4ca-457e-804d-dd920e09b308.jpg
+e68d49fd-0911-4f35-bb6d-9185521969a6.jpg
+212fa93f-d1af-4526-a2fa-10b65e098ba7.jpg
+238a8380-be71-445d-827b-1c38dfdac373.jpg
+95a9eedd-741e-4b95-8d5d-c9fd1500d735.jpg
+db58bc9b-4397-4a10-a1ab-aabded9648b4.jpg
+a9ceeb2e-79ba-4bef-a6dd-c72e048f4dbf.jpg
+8b6b22af-6239-4b7b-b2d9-948801814d28.jpg
+
+DOES NOT CONTAIN MARKER
+1f757835-e6f1-4640-b3a0-f28096bd496e.jpg
+6e1e1f95-6a61-4632-89b0-2d24b1c3eec1.jpg
+aad5e4e6-abdb-4b3c-849c-6dff9fd22c3f.jpg
+120f2ea8-4197-479c-9890-112cb489497c.jpg
+28fad6bf-8072-4b7d-b9dc-4ba4d0e852a3.jpg
+e22faa0f-2916-4c6f-ac59-23c3e810f48e.jpg
+b0f47989-de33-450e-9cbe-13c41f2cd15d.jpg
+3bcbd45e-6d22-4993-8021-0b452a963026.jpg
+12ef2fa1-4524-4cb5-b1de-40de572aa66f.jpg
+e668b482-c8ab-4fa0-bd6c-bcc3a73b66d1.jpg
