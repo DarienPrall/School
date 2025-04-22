@@ -1,0 +1,15 @@
+<program> ::= <statement>+
+<statement> ::= <var-declaration> | <assignment> | <if-statement> | <loop-statement> | <print-statement>
+<var-declaration> ::= "var" <identifier> ["=" <expression>]
+<assignment> ::= <identifier> "=" <expression>
+<if-statement> ::= "if" "(" <expression> ")" "{" <program> "}" ["else" "{" <program> "}"]
+<loop-statement> ::= "while" "(" <expression> ")" "{" <program> "}"
+<print-statement> ::= "print" <expression>
+<expression> ::= <term> [ ("+" | "-") <term>]*
+<term> ::= <factor> [ ("*" | "/") <factor>]*
+<factor> ::= <identifier> | <number> | "(" <expression> ")"
+<identifier> ::= <letter> (<letter or digit>)*
+<letter or digit> ::= <letter> | <digit>
+<letter> ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z" | "_"
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<number> ::= <digit>+ ["." <digit>+]
