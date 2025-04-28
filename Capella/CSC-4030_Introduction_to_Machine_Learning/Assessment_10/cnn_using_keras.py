@@ -75,3 +75,14 @@ model3 = models.Sequential([
     layers.Dense(128, activation='sigmoid'),
     layers.Dense(10, activation='softmax')
 ])
+
+# Step 6: Compile the models
+# - I will use the Adam optimizer and sparse categorical crossentropy loss function
+# - Loss function is used to measure how well the model is performing
+# - I will also use accuracy as a metric to evaluate the model performance
+
+for model in [model1, model2, model3]:
+    model.compile(optimizer='adam',
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+    
