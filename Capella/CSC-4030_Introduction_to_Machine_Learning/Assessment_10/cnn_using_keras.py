@@ -1,7 +1,7 @@
 #---------------------------------------------------------
 # Instructions
 # 1. Install TensorFlow
-# 2.Import the necessary libraries
+# 2. Import the necessary libraries
 # 3. Load the Fashion MNIST dataset
 # 4. Preprocess the data
 # 5. Build 3 different CNN models
@@ -12,5 +12,12 @@
 #---------------------------------------------------------
 
 # 1. Install TensorFlow
+# import tensorflow as tf
+# print("TensorFlow version:", tf.__version__)
+
+
+# 2. Import the necessary libraries
 import tensorflow as tf
-print("TensorFlow version:", tf.__version__)
+
+from tensorflow.keras import layers, models
+from tensorflow.keras.datasets import fashion_mnist
