@@ -86,3 +86,20 @@ for model in [model1, model2, model3]:
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
     
+# Step 7: Train the models
+# - I will fit each model separately
+# - I will use validation_split=0.2 to monitor overfitting
+# - I will also train for 10 epochs as specified in the instructions
+history1 = model1.fit(train_images, train_labels, epochs=10, validation_split=0.2)
+history2 = model2.fit(train_images, train_labels, epochs=10, validation_split=0.2)
+history3 = model3.fit(train_images, train_labels, epochs=10, validation_split=0.2)
+
+# Step 8: Evaluate the models
+test_loss1, test_acc1 = model1.evaluate(test_images, test_labels)
+test_loss2, test_acc2 = model2.evaluate(test_images, test_labels)
+test_loss3, test_acc3 = model3.evaluate(test_images, test_labels)
+
+print(f" Model 1 Accuracy (Basic CNN): {test_acc1:.4f}")
+print(f" Model 2 Accuracy (Increased Filters): {test_acc2:.4f}")
+print(f" Model 3 Accuracy (Different Activation): {test_acc3:.4f}")
+
