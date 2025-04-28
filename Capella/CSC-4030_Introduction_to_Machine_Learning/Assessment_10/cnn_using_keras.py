@@ -17,7 +17,16 @@
 
 
 # 2. Import the necessary libraries
+# - I need to use TensorFlow for bulding and training the CNN models.
+# - I will use Keras for building and training deep learning models.
 import tensorflow as tf
 
 from tensorflow.keras import layers, models
 from tensorflow.keras.datasets import fashion_mnist
+
+
+# 3. Load the Fashion MNIST dataset
+# - I will pre-slit into traning and testing datasets.
+
+(train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
+
