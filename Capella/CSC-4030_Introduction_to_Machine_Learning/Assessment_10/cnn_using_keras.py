@@ -30,3 +30,17 @@ from tensorflow.keras.datasets import fashion_mnist
 
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 
+# 4. Preprocess the data
+# - I need to reshape the images
+# - I also need to add a channel dimension to the images
+# - Then I will need to normalize the pixel values to be between 0 and 1 to improve the model performance
+train_images = train_images.reshape((60000, 28, 28, 1)) / 255.0
+test_images = test_images.reshape((10000, 28, 28, 1)) / 255.0
+
+# 5. Build 3 different CNN models
+# - Each of the models will explore different design choices
+# Model 1 will be a basic CNN structure
+# Model 2 will have increased number of filters
+# Model 3 will have a different activation function
+
+# Model 1: Basic CNN
