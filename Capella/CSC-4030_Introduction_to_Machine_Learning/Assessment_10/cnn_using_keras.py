@@ -44,3 +44,34 @@ test_images = test_images.reshape((10000, 28, 28, 1)) / 255.0
 # Model 3 will have a different activation function
 
 # Model 1: Basic CNN
+model1 = models.Sequential([
+    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    layers.MaxPooling2D((2, 2)),
+    layers.Conv2D(64, (3, 3), activation='relu'),
+    layers.MaxPooling2D((2, 2)),
+    layers.Flatten(),
+    layers.Dense(128, activation='relu'),
+    layers.Dense(10, activation='softmax')
+])
+
+# Model 2: Increased number of filters
+model2 = models.Sequential([
+    layers.Conv2D(64, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    layers.MaxPooling2D((2, 2)),
+    layers.Conv2D(128, (3, 3), activation='relu'),
+    layers.MaxPooling2D((2, 2)),
+    layers.Flatten(),
+    layers.Dense(128, activation='relu'),
+    layers.Dense(10, activation='softmax')
+])
+
+# Model 3: Different activation function
+model3 = models.Sequential([
+    layers.Conv2D(32, (3, 3), activation='sigmoid', input_shape=(28, 28, 1)),
+    layers.MaxPooling2D((2, 2)),
+    layers.Conv2D(64, (3, 3), activation='sigmoid'),
+    layers.MaxPooling2D((2, 2)),
+    layers.Flatten(),
+    layers.Dense(128, activation='sigmoid'),
+    layers.Dense(10, activation='softmax')
+])
