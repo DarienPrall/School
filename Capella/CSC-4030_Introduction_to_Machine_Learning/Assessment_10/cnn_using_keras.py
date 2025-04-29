@@ -36,6 +36,8 @@ from tensorflow.keras.datasets import fashion_mnist
 # - Then I will need to normalize the pixel values to be between 0 and 1 to improve the model performance
 train_images = train_images.reshape((60000, 28, 28, 1)) / 255.0
 test_images = test_images.reshape((10000, 28, 28, 1)) / 255.0
+print(f"Train images shape: {train_images.shape}")
+print(f"Test images shape: {test_images.shape}")
 
 # 5. Build 3 different CNN models
 # - Each of the models will explore different design choices
@@ -53,6 +55,7 @@ model1 = models.Sequential([
     layers.Dense(128, activation='relu'),
     layers.Dense(10, activation='softmax')
 ])
+print(f"Model 1 summary:\n{model1.summary()}")
 
 # Model 2: Increased number of filters
 model2 = models.Sequential([
@@ -64,6 +67,7 @@ model2 = models.Sequential([
     layers.Dense(128, activation='relu'),
     layers.Dense(10, activation='softmax')
 ])
+print(f"Model 2 summary:\n{model2.summary()}")
 
 # Model 3: Different activation function
 model3 = models.Sequential([
@@ -75,6 +79,8 @@ model3 = models.Sequential([
     layers.Dense(128, activation='sigmoid'),
     layers.Dense(10, activation='softmax')
 ])
+print(f"Model 3 summary:\n{model3.summary()}")
+
 
 # Step 6: Compile the models
 # - I will use the Adam optimizer and sparse categorical crossentropy loss function
