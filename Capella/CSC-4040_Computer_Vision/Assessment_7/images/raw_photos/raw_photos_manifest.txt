@@ -9,7 +9,6 @@ IMG_2410.jpeg
 IMG_2412.jpeg
 IMG_5111.jpeg
 IMG_5586.jpeg
-IMG_5698.jpeg
 IMG_6449.jpeg	
 IMG_6451.jpeg	
 IMG_6453.jpeg	
@@ -36,7 +35,6 @@ IMG_6382.jpeg
 image000001.jpg
 IMG_2014.jpeg
 IMG_2035.jpeg
-IMG_2036.jpeg
 IMG_3208.jpeg
 IMG_3644.jpeg
 IMG_3809.jpeg
@@ -51,11 +49,6 @@ IMG_4717.jpeg
 IMG_5230.jpeg
 IMG_5619.jpeg
 IMG_5677.jpeg
-IMG_5752.PNG
 IMG_5855.jpeg
-IMG_5872.jpeg
-IMG_5892.jpeg
-IMG_5893.jpeg
-IMG_5923.jpeg
 IMG_9085.jpeg
 IMG_9894.jpeg
