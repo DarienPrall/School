@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "Assessment_6",
+			"path": "."
+		},
+		{
+			"name": "resources-nn_models",
+			"path": "../../../../../../Downloads/resources-nn_models"
+		},
+		{
+			"name": "resources-nn_dataset_1",
+			"path": "../../../../../../Downloads/resources-nn_dataset_1"
+		},
+		{
+			"name": "resources-nn_dataset_2",
+			"path": "../../../../../../Downloads/resources-nn_dataset_2"
+		}
+	],
+	"settings": {}
+}
