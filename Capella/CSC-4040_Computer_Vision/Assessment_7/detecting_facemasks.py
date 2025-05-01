@@ -26,9 +26,11 @@ model_path = ('/Users/darienprall/Documents/GitHub/School/Capella/CSC-4040_Compu
 net = cv2.dnn.readNetFromTensorflow(model_path, prototxt_path)
 
 # Face Detection for Single Image
-
 def detect_faces(image_path):
     image = cv2.imread(image_path)
+    (h, w) = image.shape[:2]
+
+    image = cv2.resize(image, (600, int(h * 600 / w)))
     (h, w) = image.shape[:2]
 
     # Preparing the image for DNN
@@ -45,8 +47,8 @@ def detect_faces(image_path):
     for i in range(detections.shape[2]):
         confidence = detections [0, 0, i, 2]
 
-        # 0.5 condifence not capturing crowds or partial faces
-        if confidence > 0.5:
+        # 0.5 condifence not capturing crowds, people in masks, people in sunglasses, distant subjects
+        if confidence > 0.3:
             box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
             (startX, startY, endX, endY) = box.astype('int')
 
@@ -77,7 +79,7 @@ def detect_faces_in_folder(folder_path):
     return results
 
 # TESTING DETECTING FACES IN FOLDER
-#detect_faces_in_folder(raw_photos_directory)
+detect_faces_in_folder(raw_photos_directory)
 
 # Mask Manifest
 def load_mask_manifest(manifest_path):
