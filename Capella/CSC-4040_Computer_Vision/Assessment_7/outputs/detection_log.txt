@@ -1,0 +1,55 @@
+IMG_6533.jpeg: Apple, Apple, Apple, Apple, Apple, Orange, Orange
+IMG_6495.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6529.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Orange
+IMG_6494.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6532.jpeg: Apple, Orange, Orange, Orange, Orange
+IMG_6493.jpeg: Apple, Apple, Orange, Orange, Orange
+IMG_6489.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6492.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange
+IMG_6491.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6490.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6531.jpeg: Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6497.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6496.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange
+IMG_6530.jpeg: Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6499.jpeg: Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6505.jpeg: Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6504.jpeg: Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6498.jpeg: Orange, Orange
+IMG_6503.jpeg: Orange, Orange, Orange
+IMG_6535.jpeg: Apple, Orange
+IMG_6534.jpeg: Orange
+IMG_6538.jpeg: Apple, Apple, Orange
+IMG_6502.jpeg: Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6501.jpeg: Apple, Orange, Orange
+IMG_6537.jpeg: Orange
+IMG_6536.jpeg: Apple, Apple, Orange
+IMG_6500.jpeg: Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6507.jpeg: Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6506.jpeg: Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6509.jpeg: Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6525.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6513.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange
+IMG_6528.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6512.jpeg: Apple, Apple, Orange, Orange
+IMG_6524.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6508.jpeg: Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange
+IMG_6515.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6542.jpeg: Apple, Apple, Apple, Apple, Orange, Orange
+IMG_6539.jpeg: Apple, Apple, Apple, Orange
+IMG_6519.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange
+IMG_6523.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6522.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6518.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6543.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange
+IMG_6514.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6540.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange
+IMG_6517.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange
+IMG_6521.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6520.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange
+IMG_6516.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange
+IMG_6541.jpeg: Apple, Apple, Orange, Orange
+IMG_6527.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange
+IMG_6511.jpeg: Orange, Orange, Orange
+IMG_6510.jpeg: Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange
+IMG_6526.jpeg: Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Apple, Orange, Orange, Orange, Orange, Orange, Orange, Orange, Orange
